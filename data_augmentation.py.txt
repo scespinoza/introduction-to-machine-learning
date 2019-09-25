@@ -1,0 +1,12 @@
+def translate(img, dx=0, dy=0):
+    h, w, c = img.shape
+    translated_img = np.ones((h, w, c))
+    for i in range(h - dx):
+        for j in range(w - dy):
+            translated_img[i + dx, j + dy, :] = img[i, j, :]
+    return translated_img
+
+
+np.rot90()
+np.fliplr()
+np.flipud()
